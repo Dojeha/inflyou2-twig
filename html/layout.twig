@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Marketing</title>
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+  </head>
+  <body>
+    <div id="modalContainer" class="modal-container main">
+      <div class="modal-content main">
+        <div class="modal-info">
+          <p id="modal-text" class="modal-text"></p>
+          <img src="../src/svgs/modal-close.svg" alt="close" />
+        </div>
+        <div class="charge-radio-btns">
+          <input
+            type="radio"
+            id="device1"
+            name="device"
+            class="charge-radio"
+            checked
+          />
+          <label for="device1">
+            <div class="charge-radio-bg">
+              <p>모바일</p>
+            </div>
+          </label>
+          <input type="radio" id="device2" name="device" class="charge-radio" />
+          <label for="device2">
+            <div class="charge-radio-bg">
+              <p>PC</p>
+            </div>
+          </label>
+        </div>
+        <div id="modal-desc"></div>
+      </div>
+    </div>
+    <header>
+      <div class="header-container">
+        <div class="logo">iN</div>
+        <div class="header-btns">
+          <button class="text-btn qna">자주 묻는 질문</button>
+          <button class="text-btn">로그인</button>
+          <button class="normal-btn">회원가입</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-container">
+        <section>
+          <section class="service-container">
+            <div class="service-list" data-simplebar>
+              <input
+                type="radio"
+                id="insta"
+                name="icon"
+                class="service-input"
+                checked
+              />
+              <label for="insta" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/Instagram.svg" alt="insta" />
+                </div>
+                <p>인스타그램</p>
+              </label>
+              <input
+                type="radio"
+                id="youtube"
+                name="icon"
+                class="service-input"
+              />
+              <label for="youtube" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/YouTube.svg" alt="youtube" />
+                </div>
+                <p>유튜브</p>
+              </label>
+              <input
+                type="radio"
+                id="facebook"
+                name="icon"
+                class="service-input"
+              />
+              <label for="facebook" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/Facebook.svg" alt="Facebook" />
+                </div>
+                <p>페이스북</p>
+              </label>
+              <input
+                type="radio"
+                id="tiktok"
+                name="icon"
+                class="service-input"
+              />
+              <label for="tiktok" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/TikTok.svg" alt="TikTok" />
+                </div>
+                <p>틱톡</p>
+              </label>
+              <input type="radio" id="x" name="icon" class="service-input" />
+              <label for="x" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/X.svg" alt="X" />
+                </div>
+                <p>트위터 (X)</p>
+              </label>
+              <input
+                type="radio"
+                id="thread"
+                name="icon"
+                class="service-input"
+              />
+              <label for="thread" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/Thread.svg" alt="Thread" />
+                </div>
+                <p>스레드</p>
+              </label>
+              <input
+                type="radio"
+                id="spotify"
+                name="icon"
+                class="service-input"
+              />
+              <label for="spotify" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/Spotify.svg" alt="Spotify" />
+                </div>
+                <p>스포티파이</p>
+              </label>
+              <input
+                type="radio"
+                id="tellg"
+                name="icon"
+                class="service-input"
+              />
+              <label for="tellg" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/tellg.svg" alt="tellg" />
+                </div>
+                <p>텔레그램</p>
+              </label>
+              <input
+                type="radio"
+                id="discord"
+                name="icon"
+                class="service-input"
+              />
+              <label for="discord" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/discord.svg" alt="discord" />
+                </div>
+                <p>디스코드</p>
+              </label>
+              <input
+                type="radio"
+                id="tellg2"
+                name="icon"
+                class="service-input"
+              />
+              <label for="tellg2" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/tellg.svg" alt="tellg" />
+                </div>
+                <p>텔레그램</p>
+              </label>
+              <input
+                type="radio"
+                id="discord2"
+                name="icon"
+                class="service-input"
+              />
+              <label for="discord2" class="service-sns">
+                <div class="icon-bg">
+                  <img src="./svgs/discord.svg" alt="discord" />
+                </div>
+                <p>디스코드</p>
+              </label>
+            </div>
+          </section>
+          <section class="service-container">
+            <div class="title-wrapper">
+              <p class="subtitle-text">세부 서비스 선택</p>
+              <p class="more-btn">
+                더보기
+                <img src="./svgs/arrow.svg" alt="next" />
+              </p>
+            </div>
+            <div class="detail-service-list">
+              <input
+                type="radio"
+                id="service1"
+                name="service"
+                class="detail-service-radio"
+                checked
+              />
+              <label for="service1" class="detail-service-bg">
+                <p>인스타그램 최적화</p>
+              </label>
+              <input
+                type="radio"
+                id="service2"
+                name="service"
+                class="detail-service-radio"
+              />
+              <label for="service2" class="detail-service-bg">
+                <p>한국인 팔로워</p>
+              </label>
+              <input
+                type="radio"
+                id="service3"
+                name="service"
+                class="detail-service-radio"
+              />
+              <label for="service3" class="detail-service-bg">
+                <p>한국인 좋아요</p>
+              </label>
+              <input
+                type="radio"
+                id="service4"
+                name="service"
+                class="detail-service-radio"
+              />
+              <label for="service4" class="detail-service-bg">
+                <p>글로벌 팔로워</p>
+              </label>
+              <input
+                type="radio"
+                id="service5"
+                name="service"
+                class="detail-service-radio"
+              />
+              <label for="service5" class="detail-service-bg">
+                <p>글로벌 좋아요</p>
+              </label>
+              <input
+                type="radio"
+                id="service6"
+                name="service"
+                class="detail-service-radio"
+              />
+              <label for="service6" class="detail-service-bg">
+                <p>댓글</p>
+              </label>
+            </div>
+            <div class="select-box">
+              <select class="service-drop">
+                <option selected>[1단계] 한국인 최적화 좋아요 - [15원]</option>
+                <option>[1단계] 한국인 최적화 좋아요 (릴스) - [15원]</option>
+                <option>[2단계] 한국인 최적화 댓글 - [230원]</option>
+                <option>[3단계] 게시물 노출 + 도달 - [2.2원]</option>
+              </select>
+              <img src="./svgs/down.svg" alt="down" />
+            </div>
+            <p class="subtitle-text">상품 설명 및 주의사항</p>
+            <div class="service-description-text draggable">
+              <div id="service-description-text"></div>
+            </div>
+            <div id="fields">
+              <div class="form-group">
+                <label class="control-label">인스타그램 링크</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="https://www.instagram.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="control-label">구매 수량</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="최소 200 - 최대 500"
+                  required
+                />
+              </div>
+              <div id="divisionCheck" class="check">분할 주문</div>
+              <div class="division">
+                <div class="form-group">
+                  <label class="control-label">반복 횟수</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="control-label">주문 간격 (분)</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="control-label">총 수량</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="order-btn">0원 주문하기</button>
+          </section>
+        </section>
+        <aside>
+          <div class="banner-container">
+            <article class="banner">
+              <img src="./svgs/banner.svg" alt="banner image" />
+            </article>
+            <article class="swiper">
+              <div class="swiper-wrapper">
+                <img
+                  class="swiper-slide"
+                  src="./images/banner1.jpg"
+                  alt="banner image"
+                />
+                <img
+                  class="swiper-slide"
+                  src="./images/banner1.jpg"
+                  alt="banner image"
+                />
+                <img
+                  class="swiper-slide"
+                  src="./images/banner1.jpg"
+                  alt="banner image"
+                />
+              </div>
+              <div class="swiper-button-prev">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 9 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="scale(-1, 1)"
+                >
+                  <g id="down">
+                    <path
+                      id="Vector"
+                      d="M8.72898 7.39697C9.09034 7.72907 9.09034 8.26608 8.72898 8.59464L2.57809 14.2509C2.21672 14.583 1.63239 14.583 1.27487 14.2509C0.917348 13.9188 0.913503 13.3818 1.27487 13.0532L6.77223 8.0011L1.27102 2.94543C0.909659 2.61333 0.909659 2.07632 1.27102 1.74775C1.63239 1.41918 2.21672 1.41565 2.57424 1.74775L8.72898 7.39697Z"
+                      fill="current"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 9 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="down">
+                    <path
+                      id="Vector"
+                      d="M8.72898 7.39697C9.09034 7.72907 9.09034 8.26608 8.72898 8.59464L2.57809 14.2509C2.21672 14.583 1.63239 14.583 1.27487 14.2509C0.917348 13.9188 0.913503 13.3818 1.27487 13.0532L6.77223 8.0011L1.27102 2.94543C0.909659 2.61333 0.909659 2.07632 1.27102 1.74775C1.63239 1.41918 2.21672 1.41565 2.57424 1.74775L8.72898 7.39697Z"
+                      fill="current"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </article>
+          </div>
+          <section class="link-section">
+            <p class="subtitle-text">링크 복사 가이드</p>
+            <div class="link-list">
+              <div class="link point">
+                <p>
+                  자주 묻는 질문 바로가기<img
+                    src="../src/svgs/arrow3.svg"
+                    alt="arrow"
+                  />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  유튜브 조회수 / 좋아요 / 댓글 주문
+                  <img src="../src/svgs/arrow2.svg" alt="arrow" />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  유튜브 구독자 주문<img
+                    src="../src/svgs/arrow2.svg"
+                    alt="arrow"
+                  />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  인스타 팔로워 주문
+                  <img src="../src/svgs/arrow2.svg" alt="arrow" />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  인스타 좋아요 주문
+                  <img src="../src/svgs/arrow2.svg" alt="arrow" />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  페이스북 페이지 좋아요 + 팔로워 주문<img
+                    src="../src/svgs/arrow2.svg"
+                    alt="arrow"
+                  />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  페이스북 팔로워 주문<img
+                    src="../src/svgs/arrow2.svg"
+                    alt="arrow"
+                  />
+                </p>
+              </div>
+              <div class="link">
+                <p>
+                  페이스북 게시물 좋아요 / 댓글 주문<img
+                    src="../src/svgs/arrow2.svg"
+                    alt="arrow"
+                  />
+                </p>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p class="footer-text">
+          상호 : 첫눈처럼 | 대표자명 : 김시훈 | 사업자등록번호 : 100-00-00000<br />
+          <b>통신판매업신고번호 : 2024-서울-000</b><br />
+          연락처 : 000-000-000 | 이메일 : 00@00.com<br />
+          주소 : 000
+        </p>
+        <div class="footer-btns">
+          <button class="footer-btn">서비스이용약관</button> |
+          <button class="footer-btn"><b>개인정보처리방침</b></button>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
